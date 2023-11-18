@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer'
 const { AUTH_EMAIL, AUTH_PASS } = process.env
 
 let transporter = nodemailer.createTransport({
-  host: 'smtp-mail.outlook.com',
+  host: 'smtp.gmail.com',
   auth: {
     user: AUTH_EMAIL,
     pass: AUTH_PASS,

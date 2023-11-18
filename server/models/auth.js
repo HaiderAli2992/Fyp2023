@@ -23,6 +23,9 @@ const userSchema = mongoose.Schema({
     type: Date,
     default: Date.now
   },
+  verifytoken:{
+    type: String,
+}
 })
 
 export default mongoose.model('Users', userSchema)

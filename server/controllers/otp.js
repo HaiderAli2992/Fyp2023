@@ -18,7 +18,7 @@ const sendOTPController = async (req, res) => {
     res.status(400).send(error.message)
   }
 }
-
+``
 const verifyOTPController = async (req, res) => {
   try {
     let { email, otp } = req.body

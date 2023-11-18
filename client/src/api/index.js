@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({ baseURL: "https://stack-overflow-clone-server-vq27.onrender.com"})
+const API = axios.create({ baseURL: "http://localhost:5000/"})
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("Profile")) {
@@ -15,8 +15,20 @@ API.interceptors.request.use((req) => {
 export const logIn = (authData) => (
   API.post('/user/login', authData)
 )
+
+export const forgotpassword = (authData) => (
+  API.post('/user/forgot-password', authData)
+)
 export const signUp = (authData) => (
   API.post('/user/signup', authData)
+)
+
+export const gsignUp = (authData) => (
+  API.post('/user/googlesignup', authData)
+)
+
+export const glogIn = (authData) => (
+  API.post('/user/googlelogin', authData)
 )
 
 // QUESTION
